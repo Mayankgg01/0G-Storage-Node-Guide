@@ -1,3 +1,8 @@
+1st select your disk instance > edit > increase size to required size> save
+
+then
+
+
 command prompt -> 
 1.lsblk
 
