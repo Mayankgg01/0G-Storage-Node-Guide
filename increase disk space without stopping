@@ -1,0 +1,29 @@
+command prompt -> 
+1.lsblk
+
+output:
+NAME         MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+loop0          7:0    0 427.9M  1 loop /snap/google-cloud-cli/343
+loop1          7:1    0  73.9M  1 loop /snap/core22/1963
+loop3          7:3    0  44.4M  1 loop /snap/snapd/23771
+loop4          7:4    0  50.9M  1 loop /snap/snapd/24505
+loop5          7:5    0 425.6M  1 loop /snap/google-cloud-cli/341
+loop6          7:6    0  73.9M  1 loop /snap/core22/1981
+nvme0n1      259:0    0   500G  0 disk    
+├─nvme0n1p1  259:1    0 298.9G  0 part /        
+├─nvme0n1p13 259:2    0  1023M  0 part /boot
+├─nvme0n1p14 259:3    0     4M  0 part
+└─nvme0n1p15 259:4    0   106M  0 part /boot/efi
+
+//note nvme0n1 is the disk  whose size we have to increase  , change according to your disk
+// yha apne disk ke hisab se change kro name mere disk ka name hai nvme0n1
+2. sudo growpart /dev/nvme0n1 1  
+
+//note nvme0n1p1 is the partition whose size we have to grow
+//yha apne partition ka name jo disk ke andr hai , jaise mera nvme0n1p1
+3. sudo resize2fs /dev/nvme0n1p1  
+
+4. to confirm changes 
+df -h 
+
+Done 
