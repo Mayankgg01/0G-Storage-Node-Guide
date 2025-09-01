@@ -236,7 +236,7 @@ The service/node will be start after that:
 </div>
 
 
-* ⚕️ This Snapshot will help u to sync Faster & it will start from Block -- `5789000`
+* ⚕️ This Snapshot will help u to sync Faster & it will start from Block -- `5831787`
 
 🛠️ Installation Instructions
 
@@ -253,7 +253,7 @@ rm -rf $HOME/0g-storage-node/run/db/flow_db
 * Download and extract the Flow db:
 
 ```
-wget "https://us-west-00-firestarter.pipenetwork.com/publicDownload?hash=d6635d17d1852e3a714b4fc0d953289c" \
+wget "https://us-west-00-firestarter.pipenetwork.com/publicDownload?hash=e9410bc93716131ec96a667ff46d6574" \
   -O $HOME/0g-storage-node/run/db/flow_db.tar.zst && \
   tar --use-compress-program=unzstd -xvf $HOME/0g-storage-node/run/db/flow_db.tar.zst -C $HOME/0g-storage-node/run/db/
 ```
@@ -264,7 +264,7 @@ wget "https://us-west-00-firestarter.pipenetwork.com/publicDownload?hash=d6635d1
 sudo systemctl restart zgs
 ```
 
-✔️Done: Your Node Will start Syncing From Block `5789000` 🚀
+✔️Done: Your Node Will start Syncing From Block `5831787` 🚀
 
 
 
