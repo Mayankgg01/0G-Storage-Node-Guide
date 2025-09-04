@@ -250,23 +250,14 @@ sudo systemctl stop zgs
 rm -rf $HOME/0g-storage-node/run/db/flow_db
 ```
 
-* Install `pipx` & `gdown`
-
-```
-sudo apt install -y pipx
-pipx install gdown
-```
-
-```
-echo 'export PATH=$PATH:/home/ubuntu/.local/bin' >> ~/.bashrc
-source ~/.bashrc
-```
-
 * Download and extract the Flow db:
 
 ```
-gdown --id 1Jb4mZIU4o9dcupn97VWbJ-_Lc7VB6nTw -O $HOME/0g-storage-node/run/db/flow_db.tar.zst && \
-tar --use-compress-program=unzstd -xvf $HOME/0g-storage-node/run/db/flow_db.tar.zst -C $HOME/0g-storage-node/run/db/
+wget -q https://github.com/Mayankgg01/0G-Storage-Node-Guide/releases/download/v1.0/flow_db.tar.zst.part-aa && \
+wget -q https://github.com/Mayankgg01/0G-Storage-Node-Guide/releases/download/v1.0/flow_db.tar.zst.part-ab && \
+cat flow_db.tar.zst.part-* > flow_db.tar.zst && \
+tar --use-compress-program=unzstd -xvf flow_db.tar.zst -C $HOME/0g-storage-node/run/db/ && \
+rm flow_db.tar.zst.part-* flow_db.tar.zst
 ```
 
 * Restart Your Service/Node
