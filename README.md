@@ -257,6 +257,11 @@ sudo apt install -y pipx
 pipx install gdown
 ```
 
+```
+echo 'export PATH=$PATH:/home/ubuntu/.local/bin' >> ~/.bashrc
+source ~/.bashrc
+```
+
 * Download and extract the Flow db:
 
 ```
