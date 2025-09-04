@@ -236,7 +236,7 @@ The service/node will be start after that:
 </div>
 
 
-* ⚕️ This Snapshot will help u to sync Faster & it will start from Block -- `5831787`
+* ⚕️ This Snapshot will help u to sync Faster & it will start from Block -- `5971353`
 
 🛠️ Installation Instructions
 
@@ -250,12 +250,18 @@ sudo systemctl stop zgs
 rm -rf $HOME/0g-storage-node/run/db/flow_db
 ```
 
+* Install `pipx` & `gdown`
+
+```
+sudo apt install -y pipx
+pipx install gdown
+```
+
 * Download and extract the Flow db:
 
 ```
-wget "https://us-west-00-firestarter.pipenetwork.com/publicDownload?hash=e9410bc93716131ec96a667ff46d6574" \
-  -O $HOME/0g-storage-node/run/db/flow_db.tar.zst && \
-  tar --use-compress-program=unzstd -xvf $HOME/0g-storage-node/run/db/flow_db.tar.zst -C $HOME/0g-storage-node/run/db/
+gdown --id 1Jb4mZIU4o9dcupn97VWbJ-_Lc7VB6nTw -O $HOME/0g-storage-node/run/db/flow_db.tar.zst && \
+tar --use-compress-program=unzstd -xvf $HOME/0g-storage-node/run/db/flow_db.tar.zst -C $HOME/0g-storage-node/run/db/
 ```
 
 * Restart Your Service/Node
@@ -264,7 +270,7 @@ wget "https://us-west-00-firestarter.pipenetwork.com/publicDownload?hash=e9410bc
 sudo systemctl restart zgs
 ```
 
-✔️Done: Your Node Will start Syncing From Block `5831787` 🚀
+✔️Done: Your Node Will start Syncing From Block `5971353` 🚀
 
 
 
